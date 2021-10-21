@@ -8,9 +8,13 @@ import { MatTableModule } from "@angular/material/table";
 })
 export class CoursesComponent implements OnInit {
 
+  courses: any[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+
 
 }
