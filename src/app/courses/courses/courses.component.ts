@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableModule } from "@angular/material/table";
+import {Course} from "../model/course";
 
 @Component({
   selector: 'app-courses',
@@ -8,13 +8,17 @@ import { MatTableModule } from "@angular/material/table";
 })
 export class CoursesComponent implements OnInit {
 
-  courses: any[] = [];
+  courses: Course[] = [
+    { _id: 1, name: 'Angular', category: 'Front-end'}
+  ];
 
-  constructor() { }
+  displayedColumns = ['name', 'category']
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
-
 
 
 }
