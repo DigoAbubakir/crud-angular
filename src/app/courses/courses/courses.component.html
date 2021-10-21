@@ -1,5 +1,6 @@
+<mat-card>
+  <mat-toolbar color="primary">Cursos Disponíveis</mat-toolbar>
 <table mat-table [dataSource]="courses" class="mat-elevation-z8">
-
   <!-- Name Column -->
   <ng-container matColumnDef="name"> <!--Lembrar que aqui é a variavel-->
     <th mat-header-cell *matHeaderCellDef> Curso </th>
@@ -15,3 +16,4 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+</mat-card>
