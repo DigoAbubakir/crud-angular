@@ -20,6 +20,7 @@ export class CoursesComponent implements OnInit {
   constructor(
     private coursesService: CoursesService,
     public dialog: MatDialog) {
+
     this.courses$ = this.coursesService.list().pipe(
       catchError(error => {
           this.onError('Erro ao carregar cursos.')
@@ -31,7 +32,13 @@ export class CoursesComponent implements OnInit {
 
   onError(errorMsg: string) {
     this.dialog.open(ErrorDialogComponent, {
-        data: errorMsg
+        height: '400px',
+        width: '400px',
+
+        data: {
+          mensagem: errorMsg,
+          img: 'https://i.ibb.co/6r5XsJ2/sign-error-icon-34362-1.png'
+        }
       }
     );
   }
