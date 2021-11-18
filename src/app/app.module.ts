@@ -8,10 +8,9 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { HttpClientModule} from "@angular/common/http";
 import {MatButtonModule} from "@angular/material/button";
 
-
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
     imports: [
         BrowserModule,

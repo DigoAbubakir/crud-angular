@@ -6,11 +6,13 @@ import { CoursesRoutingModule } from './courses-routing.module';
 import { CoursesComponent } from './courses/courses.component';
 import {SharedModule} from "../shared/shared.module";
 import {MatMenuModule} from "@angular/material/menu";
+import { CriarComponent } from './criar/criar.component';
 
 
 @NgModule({
   declarations: [
-    CoursesComponent
+    CoursesComponent,
+    CriarComponent
   ],
     imports: [
         CommonModule,
