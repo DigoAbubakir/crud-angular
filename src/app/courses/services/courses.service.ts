@@ -22,4 +22,8 @@ export class CoursesService {
       );
   }
 
+  new(course: Course) {
+    return this.httpClient.post(this.API + '/courses', course)
+  }
+
 }
