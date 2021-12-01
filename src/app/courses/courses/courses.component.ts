@@ -5,6 +5,7 @@ import {Observable, of} from "rxjs";
 import {catchError} from "rxjs/operators";
 import {MatDialog} from "@angular/material/dialog";
 import {ErrorDialogComponent} from "../../shared/components/error-dialog/error-dialog.component";
+import {AssertNotNull} from "@angular/compiler";
 
 @Component({
   selector: 'app-courses',
@@ -29,7 +30,6 @@ export class CoursesComponent implements OnInit {
       )
     )
   }
-
   onError(errorMsg: string) {
     this.dialog.open(ErrorDialogComponent, {
         height: '400px',
@@ -42,6 +42,9 @@ export class CoursesComponent implements OnInit {
       }
     );
   }
+  
+
+
 
   ngOnInit(): void {
   }

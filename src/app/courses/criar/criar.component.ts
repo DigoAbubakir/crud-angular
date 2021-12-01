@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
 @Component({
   selector: 'app-criar',
   templateUrl: './criar.component.html',
-  styleUrls: ['./criar.component.scss']
+  styleUrls: ['./criar.component.scss'],
 })
 export class CriarComponent implements OnInit {
 
@@ -50,3 +50,5 @@ export class CriarComponent implements OnInit {
     )
   }
 }
+
+
