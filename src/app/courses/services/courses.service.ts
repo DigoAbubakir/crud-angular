@@ -26,4 +26,8 @@ export class CoursesService {
     return this.httpClient.post(this.API + '/courses', course)
   }
 
+  delete(id: number) {
+    return this.httpClient.delete(this.API + '/courses/delete/' + id)
+  }
+
 }

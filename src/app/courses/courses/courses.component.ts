@@ -30,6 +30,7 @@ export class CoursesComponent implements OnInit {
       )
     )
   }
+
   onError(errorMsg: string) {
     this.dialog.open(ErrorDialogComponent, {
         height: '400px',
@@ -42,11 +43,15 @@ export class CoursesComponent implements OnInit {
       }
     );
   }
-  
-
-
 
   ngOnInit(): void {
+  }
+
+
+  delete(id: number) {
+    this.coursesService.delete(id).subscribe(data => {
+      this.courses$ = this.coursesService.list()
+    })
   }
 
 

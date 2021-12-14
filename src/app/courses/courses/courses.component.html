@@ -31,9 +31,9 @@
       <!-- Button Column -->
       <ng-container matColumnDef="actions" >
         <th mat-header-cell *matHeaderCellDef>Ações</th>
-        <td mat-cell *matCellDef="let course" >
+        <td mat-cell *matCellDef="let row" >
           <a mat-raised-button mat-button color="primary" class="edit"> Editar </a>
-          <button mat-raised-button mat-button color="warn" class="deletar">Deletar</button>
+          <a mat-raised-button mat-button color="warn" class="deletar" (click)="delete(row.id)">Deletar</a>
         </td>
       </ng-container>
 
